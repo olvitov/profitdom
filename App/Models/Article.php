@@ -7,6 +7,7 @@
  */
 
 namespace App\Models;
+use App\Db;
 
 
 class Article
@@ -16,4 +17,12 @@ class Article
     public $description;
     public $text;
 
+    public static function findAll() {
+        
+        $db = new Db();
+        return $db->query(
+            'SELECT * FROM articles',
+            'App\Models\Article'
+        );
+    }
 }

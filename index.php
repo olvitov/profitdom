@@ -2,20 +2,13 @@
 
   require __DIR__ . '/autoload.php';
 
-$db = new \App\Db();
-
-$data = $db->query(
-    'SELECT * FROM articles',
-    'App\Models\Article'
-
-);
-
-$data1 = $db->query(
-    'SELECT * FROM lessons',
-    'App\Models\lesson'
-);
+$articles = \App\Models\Article::findAll();
 
 
-var_dump($data);
+$lessons =  \App\Models\Lesson::findAll();
 
-var_dump($data1);
+
+
+var_dump($articles);
+
+var_dump($lessons);
