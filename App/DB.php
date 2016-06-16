@@ -4,12 +4,18 @@ namespace App;
 
 class DB
 {
-    public $dbh;
+    protected $dbh;
+    
     public function __construct()
     {
         $this->dbh = new \PDO('mysql:host=127.0.0.1; dbname=jurnal', 'olvit', '34vit');
     }
     
+
+    /*
+     * если нужно что-то вставить v BD
+     * */
+
     public function execute($sql) {
         
         $sth = $this->dbh->prepare($sql);
@@ -17,6 +23,9 @@ class DB
         return $res;
         
     }
+    /*
+     * если нужно извлечь из БД
+     * */
     
     public function query($sql, $class) {
         
@@ -26,9 +35,11 @@ class DB
         if (false !== $res) {
             
             return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
+            
         }
-    return[];    
+    return[];   
+        
     }
-    
+
 
 }
