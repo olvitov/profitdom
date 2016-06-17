@@ -19,7 +19,7 @@ class Model
         $db = new Db();
         return $db->query(
             'SELECT * FROM ' . static::TABLE,
-            self::class
+            static::class
         );
     }
 
