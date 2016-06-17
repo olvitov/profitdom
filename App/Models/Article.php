@@ -21,5 +21,10 @@ class Article extends  Model
     public $description;
     public $text;
 
-    
+
+    public function getName()
+    {
+
+    }
+
 }

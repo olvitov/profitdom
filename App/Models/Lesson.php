@@ -21,5 +21,12 @@ class Lesson extends Model
     public $description;
     public $text;
 
+    /**
+     * @return mixed
+     */
+   public function getName()
+    {
+
+    }
 
 }
