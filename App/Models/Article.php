@@ -7,22 +7,19 @@
  */
 
 namespace App\Models;
+
 use App\Db;
+use App\Model;
 
 
-class Article
+class Article extends  Model
 {
+    const TABLE = 'articles';
+
     public $title;
     public $date;
     public $description;
     public $text;
 
-    public static function findAll() {
-        
-        $db = new Db();
-        return $db->query(
-            'SELECT * FROM articles',
-            'App\Models\Article'
-        );
-    }
+    
 }

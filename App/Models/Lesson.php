@@ -9,23 +9,17 @@
 namespace App\Models;
 
 use App\Db;
+use App\Model;
 
 
-class Lesson
+class Lesson extends Model
 {
+    const TABLE = 'lessons';
+
     public $title;
     public $date;
     public $description;
     public $text;
 
-    public static function findAll()
-    {
 
-        $db = new Db();
-        return $db->query(
-            'SELECT * FROM lessons',
-            'App\Models\Lesson'
-        );
-
-    }
 }
