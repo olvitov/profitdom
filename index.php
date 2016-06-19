@@ -27,7 +27,7 @@ use App\Models\Article;
 
     }
 
-    sendEMail($userlist[0],'Hello');
+    sendEMail($userlist[1],'Hello');
 
 
 
