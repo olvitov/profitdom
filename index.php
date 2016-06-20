@@ -10,25 +10,11 @@ use App\Models\Article;
 
   require __DIR__ . '/autoload.php';
 
- $articles = Article::findAll();
-
-
- $lessons =  Lesson::findAll();
-
- $userlist = UserList::findAll();
-
-// echo \App\Models\Article::$table;
-
-
-    function sendEMail(HasEmail $user, string $message)
-
-    {
-        echo 'Почта уходит на ' . $user->email;
-
-    }
-
-    sendEMail($userlist[1],'Hello');
-
+$userlist = new UserList();
+$userlist->user = 'Vasya';
+$userlist->email = 'v@pupkin.ru';
+$userlist->pass = '34vit';
+$userlist->insert();
 
 
 

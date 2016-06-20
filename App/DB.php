@@ -18,10 +18,10 @@ namespace App;
      * если нужно что-то вставить v BD
      * */
 
-    public function execute($sql) {
+    public function execute($sql, $params = []) {
         
         $sth = $this->dbh->prepare($sql);
-        $res = $sth->execute();
+        $res = $sth->execute($params);
         return $res;
         
     }

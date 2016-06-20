@@ -13,6 +13,7 @@ use App\Model;
 
     public $user;
     public $email;
+     public $pass;
 
     public function getEmail()
     {

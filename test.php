@@ -2,12 +2,6 @@
 
 require __DIR__ . '/autoload.php';
 
-$s = \App\Singleton::instance();
+$userlist = new Userlist();
+$userlist->insert();
 
-$s->counter =1;
-
-var_dump($s);
-
-$s = \App\Singleton::instance();
-
-var_dump($s);
