@@ -1,20 +1,9 @@
 <?php
 
 
-use App\Models\HasEmail;
-use App\Models\UserList;
 
+  include __DIR__ . '/App/templates/index.php';
 
-use App\Models\Lesson;
-use App\Models\Article;
-
-  require __DIR__ . '/autoload.php';
-
-$userlist = new UserList();
-$userlist->user = 'Vasya';
-$userlist->email = 'v@pupkin.ru';
-$userlist->pass = '34vit';
-$userlist->insert();
 
 
 
