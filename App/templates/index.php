@@ -16,7 +16,7 @@
         <th>Пароль</th>
       </tr>
     </thead>
-    <?php foreach ($userlist as $user) :?>
+    <?php foreach ($this->userlist as $user) :?>
     <tbody>
       <tr>
         <td><?php echo $user->id;?></td>
@@ -30,11 +30,11 @@
   </table>
 </section>
 
-
      <hr>
+
+
+
 
     <?php include __DIR__ . '/index/footer.php'; ?>
 
 
-  </body>
-</html>

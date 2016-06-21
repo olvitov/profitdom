@@ -15,6 +15,11 @@ use App\Model;
     public $email;
      public $pass;
 
+     /**
+      * @deprecated 
+      * @return mixed
+      */
+
     public function getEmail()
     {
         return $this->email;
