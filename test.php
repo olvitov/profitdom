@@ -2,6 +2,9 @@
 
 require __DIR__ . '/autoload.php';
 
-$userlist = new Userlist();
-$userlist->insert();
+$news = \App\Models\News::findAll();
+$article = \App\Models\Article::findAll();
+
+var_dump($news);
+
 
