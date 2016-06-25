@@ -29,10 +29,10 @@ namespace App;
      * если нужно извлечь из БД
      * */
     
-    public function query($sql, $class) {
+    public function query($sql, $params, $class) {
         
         $sth = $this->dbh->prepare($sql);
-        $res = $sth->execute();
+        $res = $sth->execute($params);
         
         if (false !== $res) {
             
