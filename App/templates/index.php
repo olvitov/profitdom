@@ -4,27 +4,26 @@
 
 <section id="tables">
   <div class="page-header">
-    <h1>Таблица Пользователей</h1>
+    <h1>Все новости</h1>
   </div>
   
   <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Пользователь</th>
-        <th>EMAIL</th>
-        <th>Пароль</th>
+
+        <th>Все новости</th>
+
       </tr>
     </thead>
-    <?php foreach ($this->userlist as $user) :?>
+    <?php foreach ($news as $article) :?>
     <tbody>
       <tr>
-        <td><?php echo $user->id;?></td>
-        <td><?php echo $user->user;?></td>
-        <td><?php echo $user->email;?></td>
-        <td><?php echo $user->pass;?>
+        <td><?php echo $article->title;?></td>
 
-
+<?php if (!empty($article->author)): ?>
+   <td> Автор: <?php echo $article->author->name; ?></td>
+    <?php endif; ?>
+      </tr>
     <?php endforeach; ?>
     </tbody>
   </table>

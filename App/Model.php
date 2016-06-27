@@ -32,7 +32,7 @@ namespace App;
              'SELECT * FROM ' . static::TABLE . ' WHERE id=:id',
          [':id' => $id],
              static::class
-         );
+         )[0];
      }
 
      public static function findOneByPk($id, $value) {
