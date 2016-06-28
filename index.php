@@ -4,8 +4,11 @@ require __DIR__ . '/autoload.php';
 
 
 
-$controller = new \App\Controllers\News();
-$controller->action('Index');
+$controllerNews = new \App\Controllers\News();
+ $controllerArticle = new \App\Controllers\Article();
+
+ $controllerNews->action('Index');
+ $controllerArticle->action('Index');
 
 
 

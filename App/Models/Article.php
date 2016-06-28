@@ -2,29 +2,61 @@
 /**
  * Created by PhpStorm.
  * User: olvit
- * Date: 16.06.2016
- * Time: 8:59
+ * Date: 25.06.2016
+ * Time: 19:42
  */
 
 namespace App\Models;
 
-use App\Db;
 use App\Model;
 
+/**
+ * Class News
+ * @package App\Models
+ *
+ * @property \App\Models\Author $author
+ */
 
-class Article extends  Model
+class Article
+    extends Model
 {
     const TABLE = 'articles';
 
     public $title;
-    public $date;
-    public $description;
     public $text;
+    public $author_id;
 
+    /**
+     * LAZY LOAD
+     *
+     * @param $k
+     * @return null
+     */
 
-    public function getName()
+    public function __get($k)
     {
+        switch ($k) {
 
+            case 'author':
+                return Author::findById($this->author_id);
+                break;
+            default:
+                return null;
+
+        }
     }
 
+    public function __isset($k)
+    {
+        switch ($k) {
+
+            case 'author':
+                return true;
+                break;
+            default:
+                return null;
+        }
+
+    }
 }
+

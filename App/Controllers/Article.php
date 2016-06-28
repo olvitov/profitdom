@@ -11,7 +11,7 @@ namespace App\Controllers;
 
 use App\View;
 
-class News
+class Article
 {
     protected $view;
     public function __construct()
@@ -34,17 +34,17 @@ class News
     protected function actionIndex()
     {
         $view = new \App\View();
-       $this->view->title = 'Мой сайт';
-        $this->view->news = \App\Models\News::findAll();
-        $this->view->display(__DIR__ . '/../templates/index.php');
+        $this->view->title = 'Мой сайт';
+        $this->view->article = \App\Models\Article::findAll();
+        $this->view->display(__DIR__ . '/../templates/index1.php');
 
     }
 
     protected function actionOne()
     {
         $id =(int)$_GET['id'];
-        $this->view->article = \App\Models\News::findById($id);
-        $this->view->display(__DIR__ . '/../templates/one.php');
+        $this->view->article = \App\Models\Article::findById($id);
+        $this->view->display(__DIR__ . '/../templates/index1.php');
     }
 
 }
