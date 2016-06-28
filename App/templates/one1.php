@@ -18,14 +18,14 @@
 
         <tbody>
         <tr>
-            <td><?php echo $article->title;?></td>
-            
+            <td><?php echo $articl->title;?></td>
 
-            <?php if (!empty($article->author)): ?>
-                <td> Автор: <?php echo $article->author->name; ?></td>
+
+            <?php if (!empty($articl->author)): ?>
+                <td> Автор: <?php echo $articl->author->name; ?></td>
             <?php endif; ?>
         </tr>
-   
+
         </tbody>
     </table>
 </section>

@@ -44,7 +44,7 @@ class Article
     {
         $id =(int)$_GET['id'];
         $this->view->article = \App\Models\Article::findById($id);
-        $this->view->display(__DIR__ . '/../templates/index1.php');
+        $this->view->display(__DIR__ . '/../templates/one1.php');
     }
 
 }
