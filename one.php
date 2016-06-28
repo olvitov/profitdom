@@ -8,5 +8,5 @@ $controllerNews = new \App\Controllers\News();
  $controllerArticle = new \App\Controllers\Article();
 
 $controllerNews->action('one');
- // $controllerArticle->action('one1');
+// $controllerArticle->action('one1');
 

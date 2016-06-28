@@ -1,6 +1,9 @@
 <?php
 
+
 require __DIR__ . '/autoload.php';
+
+$url = $_SERVER['REQUEST_URI'];
 
 
 
